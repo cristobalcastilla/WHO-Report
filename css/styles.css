@@ -68,7 +68,7 @@ h1 {
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 7px;
-  padding-left: 40px;  
+  padding-left: 20px;  
   display: inline-block;
 }
 
@@ -77,7 +77,6 @@ h2 {
   color:#008EC4;
   font-size: 30px;
   font-weight: 400;
-  margin: 40px;
 }
 
 h3 {
@@ -85,7 +84,6 @@ h3 {
   font-weight: 400;
   font-size: 22px;
   line-height: 22px;
-  margin: 40px;
 }
 
 h4 {
@@ -95,7 +93,6 @@ h4 {
   font-family: 'Droid Sans';
   text-transform: uppercase;
   line-height: 16px;
-  margin-left: 40px;
 }
 
 p.mays {
@@ -104,7 +101,6 @@ p.mays {
   font-family: 'Droid Sans';
   text-transform: uppercase;
   font-weight: 400;
-  margin-left: 40px;
 
 }
 
@@ -113,7 +109,6 @@ p {
   font-size: 12px;
   font-family: 'Droid Sans';
   font-weight: 400;
-  margin-left: 40px;
 
 }
 
@@ -121,7 +116,6 @@ p {
   color: #008EC4;
   font-size: 110px;
   font-weight: 700;
-  margin: 40px;
 
 }
 
@@ -130,7 +124,6 @@ caption {
   font-size: 11px;
   font-family: 'Droid Sans';
   font-weight: 400;
-  margin-left: 40px;
 
 }
 
