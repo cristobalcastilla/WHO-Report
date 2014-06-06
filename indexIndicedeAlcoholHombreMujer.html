@@ -1,0 +1,73 @@
+<html>
+<head>
+	<title>Titulo</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">  
+
+  <!-- Javascripts -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+  	
+  	
+</head>
+<body>
+	<head>
+		<h1>Nivel de Alcohol 2008-2009</h1>
+		<p>Hombres vs. Mujeres</p>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		
+	</head>
+  	
+  	<canvas id="viz" width="700" height="400"> </canvas>
+  	<script> 
+
+  	var barChartData = {
+			labels : ["Hombre","Mujer"],
+		
+
+			datasets : [
+				{
+					fillColor : "rgba(213,113,106,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [8.16,2.09]
+				},
+				{
+					fillColor : "rgba(239,145,105,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [10.82,3.8]
+				},
+				{
+					fillColor : "rgba(245, 227, 138,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [1.77,0.26]
+				},
+				{
+					fillColor : "rgba(153, 80, 128,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [15.04,5.40]
+				},
+				{
+					fillColor : "rgba(82, 118, 160,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [4.38,0.23]
+				},
+				{
+					fillColor : "rgba(119, 171, 115,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					data : [8.46,1.76]
+
+				}
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("viz").getContext("2d")).Bar(barChartData);
+ 
+
+  	</script> 
+</body>
+</html>
+

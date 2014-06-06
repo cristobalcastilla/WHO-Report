@@ -12,7 +12,7 @@ jQuery(document).ready(function($) {
   type = 'line';
   id = 'viz-2-1';
   c = 12;
-  h = 500;
+  h = 300;
   data = {
     labels : ["Africa","America","Eastern Mediterranean","Europa","South-East Asia","Western Pacific","Global"],
     datasets : [
@@ -41,7 +41,7 @@ jQuery(document).ready(function($) {
   type = 'radar';
   id = 'viz-2-2';
   c = 12;
-  h = 500;
+  h = 300;
   data = {
     labels : ["2000","2006","2012"],
     datasets : [
@@ -67,12 +67,85 @@ jQuery(document).ready(function($) {
   // createChart(type, id, c, h, data);
 
 
+  // Alcohol
+  type = 'bar';
+  id = 'viz-3-1';
+  c = 6;
+  h = 300;
+  data = {
+    labels : ["Hombre","Mujer"],
+    datasets : [
+      {
+        fillColor : "rgba(213,113,106,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [8.16,2.09]
+      },
+      {
+        fillColor : "rgba(239,145,105,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [10.82,3.8]
+      },
+      {
+        fillColor : "rgba(245, 227, 138,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [1.77,0.26]
+      },
+      {
+        fillColor : "rgba(153, 80, 128,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [15.04,5.40]
+      },
+      {
+        fillColor : "rgba(82, 118, 160,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [4.38,0.23]
+      },
+      {
+        fillColor : "rgba(119, 171, 115,0.5)",
+        strokeColor : "rgba(255,255,255,1)",
+        data : [8.46,1.76]
+      }
+    ]
+  }
+
+  createChart(type, id, c, h, data);
+
+
+
+  // violencia sexual
+  type = 'line';
+  id = 'viz-3-2';
+  c = 6;
+  h = 300;
+  data = {
+    // labels : ["Africa Region","Americas","Eastern Mediterranean Region","European Region","South-East Asia Region","Western Pacific Region"],
+    labels: ['afr', 'amr', 'emr', 'eur', 'sear', 'wpr'],
+    datasets : [
+      {
+        fillColor : "rgba(82,118,160,0.5)",
+        // strokeColor : "rgba(255,255,255,1)",
+        // pointColor : "rgba(140,140,140,0)",
+        // pointStrokeColor : "#000000",
+        data : [36.67,29.8,37.0,25.4,37.67,24.55]
+      },      
+      {
+        fillColor : "rgba(173,45,164,0.5)",
+        // strokeColor : "rgba(255,255,255,1)",
+        // pointColor : "rgba(140,140,140,0)",
+        // pointStrokeColor : "#000000",
+        data : [11.91,10.69,0,5.24,4.94,6.81]
+      }
+    ]
+  }
+
+  createChart(type, id, c, h, data);
+
 
   // desnutricion + obesidad
   type = 'line';
   id = 'viz-3-3';
   c = 12;
-  h = 500;
+  h = 300;
   data = {
     labels : ["África","Américas","Asia Sudoriental","Europa","Mediterráneo Oriental","Pacífico Occidental","Global"],
     datasets : [
@@ -104,7 +177,7 @@ jQuery(document).ready(function($) {
   type = 'bar';
   id = 'viz-4-1-2-a';
   c = 6;
-  h = 500;
+  h = 300;
 
   data = {
     labels : ["Acceso a Agua Potable",],
@@ -203,7 +276,7 @@ jQuery(document).ready(function($) {
   type = 'bar';
   id = 'viz-4-2-1-a';
   c = 6;
-  h = 500;
+  h = 300;
   data = {
     <!-- // labels: Bolivia, Chile, Nigeria, Côte dIvoire, Egypt, Syrian Arab Republic,Turkey, The former Yugoslav Republic of Macedonia, India, Thailand, Papua New Guinea, China-->
     labels : ["l1"],
@@ -342,7 +415,7 @@ jQuery(document).ready(function($) {
   type = 'polar';
   id = 'viz-4-2-1-b';
   c = 6;
-  h = 500;
+  h = 300;
 
   data = [
     <!--//Africa-->
@@ -397,7 +470,6 @@ jQuery(document).ready(function($) {
   id = 'viz-4-2-2';
   c = 12;
   h = 500;
-  
   data = [
     {
       value : 51,

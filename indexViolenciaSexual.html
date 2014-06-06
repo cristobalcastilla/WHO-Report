@@ -1,0 +1,58 @@
+<html>
+<head>
+	<title>Titulo</title>
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  	<link rel="stylesheet" type="text/css" href="css/style.css">  
+
+  <!-- Javascripts -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+  	
+  	
+</head>
+
+<body>
+<body>
+	<head>
+		<h1>Violencia Sexual (%) 2010</h1>
+		<p>Violencia en la pareja vs. Violencia por personas ajenas</p>
+		<script src="../Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		
+	</head>
+	<body>
+		<canvas id="canvas" height="450" width="600"></canvas>
+	<script>
+		var lineChartData = {
+			labels : ["Africa Region","Americas","Eastern Mediterranean Region","European Region","South-East Asia Region","Western Pacific Region"],
+			datasets : [
+				<!--violencia_pareja-->
+				{
+					fillColor : "rgba(82,118,160,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					pointColor : "rgba(140,140,140,0)",
+					pointStrokeColor : "#000000",
+					data : [36.67,29.8,37.0,25.4,37.67,24.55]
+				},
+				<!--violencia_ajenos-->
+				{
+					fillColor : "rgba(173,45,164,0.5)",
+					strokeColor : "rgba(255,255,255,1)",
+					pointColor : "rgba(140,140,140,0)",
+					pointStrokeColor : "#000000",
+					data : [11.91,10.69,0,5.24,4.94,6.81]
+				}
+			]
+			
+		}
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+	
+	</script>
+	</body>
+</html>
+
+ 
+
