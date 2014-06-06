@@ -48,7 +48,7 @@ VALORES GENERALES
 TAGS PRINCIPALES 
 */
 body {
-  background-color: #dddddd;
+  background-color: #fff;
   color: #8C8C8C;
   text-align: left;
   font-family: 'Droid Serif', sans-serif;
@@ -58,26 +58,26 @@ h1, h2, h3, h4, h5, h6 { color: #000000; }
 
 
 h1 {
-  border-bottom: 1px dotted rgba(0,0,0,.2);
   color:#fff;
   font-weight: 400;
   text-transform: uppercase;
   font-family: 'Droid Sans';
   font-size: 13px;
   background-color: #008EC4; 
-  margin-top: 80px;
   /*letter-spacing: -0.5px;*/
   margin-top: 30px;
   margin-bottom: 20px;
   padding: 7px;
+  padding-left: 40px;  
   display: inline-block;
 }
 
 h2 {
+  /*border-bottom: 1px dotted rgba(0,0,0,.2);*/
   color:#008EC4;
   font-size: 30px;
   font-weight: 400;
-  margin: 22px;
+  margin: 40px;
 }
 
 h3 {
@@ -85,7 +85,7 @@ h3 {
   font-weight: 400;
   font-size: 22px;
   line-height: 22px;
-  margin: 20px 100px;
+  margin: 40px 100px;
 }
 
 h4 {
@@ -95,6 +95,7 @@ h4 {
   font-family: 'Droid Sans';
   text-transform: uppercase;
   line-height: 22px;
+  margin-left: 40px;
 }
 
 p.mays {
@@ -103,7 +104,7 @@ p.mays {
   font-family: 'Droid Sans';
   text-transform: uppercase;
   font-weight: 400;
-  margin: 40px;
+  margin-left: 40px;
 
 }
 
@@ -112,7 +113,7 @@ p {
   font-size: 12px;
   font-family: 'Droid Sans';
   font-weight: 400;
-  margin: 40px;
+  margin-left: 40px;
 
 }
 
@@ -153,7 +154,7 @@ CLASES PRINCIPALES
 */
 .viz {
   padding-bottom: 60px;
-  border: 1px dotted rgba(0,0,0,0.1);
+  border-bottom: 1px dotted rgba(0,0,0,0.1);
   background-color: white;
   margin-bottom: 20px;
   margin-top: 20px;
