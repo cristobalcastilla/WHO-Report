@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Porcentaje de Acceso a Agua Potable comparado con saneamiento</title>
+
+<!-- CSS -->
+<link rel="stylesheet" type="text/css" href="Css/boostrap.min.css">
+<link rel="stylesheet" type="text/css" href="Fonts/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="Css/style.css">
+
+<!-- javascripts -->
+<script src="js/jquery-2.1.1.min.js" ="text/javascript"></script>
+<script src="js/boostrap.min.js" ="text/javascript"></script>
+<script src="js/Chart.min.js" ="text/javascript"></script>
+
+
+</head>
+<body>
+
+<h1>Porcentaje por regiones sobre la cantidad de habitantes que tiene agua potable y saneamiento</h1>
+<p>El agua potable es agua en condiciones para el consumo humano mientras que saneamiento son servicios de recolección de basurua y alcantarillado</p>
+
+<canvas id="viz" width="600" height="500"></canvas>
+<canvas id="viz-2" width="600" height="500"></canvas>
+<h3>Porcentaje de personal calificado en el parto</h3>
+<canvas id="viz-3" width="600" height="500"></canvas>
+
+	
+	<script>
+
+
+	var barChartData = {
+		labels : ["Acceso a Agua Potable",],
+		datasets : [
+		{
+			fillColor : "rgba(213,113,106,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [73]
+		},
+		{
+			fillColor : "rgba(245,227,138,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [88]
+		},
+
+		{
+			fillColor : "rgba(82,118,160,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [90]
+		},
+		{
+			fillColor : "rgba(119,171,115,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [90]
+		},
+		{
+			fillColor : "rgba(239,145,105,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [93]
+		},
+		{
+			fillColor : "rgba(153,80,128,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [97]
+		}
+		]
+	};
+
+	var options = {
+		//Boolean - If we show the scale above the chart data			
+		scaleOverlay : false,
+		
+		//Boolean - If we want to override with a hard coded scale
+		scaleOverride : true,
+		
+		//** Required if scaleOverride is true **
+		//Number - The number of steps in a hard coded scale
+		scaleSteps : 9,
+		//Number - The value jump in the hard coded scale
+		scaleStepWidth : 10,
+		//Number - The scale starting value
+		scaleStartValue : 10,
+	}
+
+	var myLine = new Chart(document.getElementById("viz").getContext("2d")).Bar(barChartData, options);
+
+	var barChartData = {
+		labels : ["Acceso a saneamiento",],
+		datasets : [
+		{
+			fillColor : "rgba(213,113,106,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [36]
+		},
+		{
+			fillColor : "rgba(245,227,138,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [76]
+		},
+
+		{
+			fillColor : "rgba(82,118,160,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [65]
+		},
+		{
+			fillColor : "rgba(119,171,115,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [75]
+		},
+		{
+			fillColor : "rgba(239,145,105,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [82]
+		},
+		{
+			fillColor : "rgba(153,80,128,0.9)", 
+			strokeColor : "rgba(255,255,255,1)", 
+			data : [97]
+		},
+		]
+	};
+
+	var options = {
+		//Boolean - If we show the scale above the chart data			
+		scaleOverlay : false,
+		
+		//Boolean - If we want to override with a hard coded scale
+		scaleOverride : true,
+		
+		//** Required if scaleOverride is true **
+		//Number - The number of steps in a hard coded scale
+		scaleSteps : 9,
+		//Number - The value jump in the hard coded scale
+		scaleStepWidth : 10,
+		//Number - The scale starting value
+		scaleStartValue : 10,
+
+			//Number - Spacing between each of the X value sets
+	barValueSpacing : 5,
+	}
+	var myLine = new Chart(document.getElementById("viz-2").getContext("2d")).Bar(barChartData, options);
+
+
+	var data = [
+
+		{
+			value : 51,
+			color: "#D5716A"
+		},
+		{
+			value : 70,
+			color: "#EF9169"
+		},
+		{
+			value : 69,
+			color: "#F5E38A"
+		},
+		{
+			value : 96,
+			color: "#995080"
+		},
+		{
+			value : 40,
+			color: "#5376A0"
+		},
+		{
+			value : 63,
+			color: "#77AB77"
+		}
+	]
+
+	var options = {
+				
+	//Boolean - Whether we show the scale above or below the chart segments
+	scaleOverlay : true,
+	
+	//Boolean - If we want to override with a hard coded scale
+	scaleOverride : true,
+	
+	//** Required if scaleOverride is true **
+	//Number - The number of steps in a hard coded scale
+	scaleSteps : 9,
+	//Number - The value jump in the hard coded scale
+	scaleStepWidth : 10,
+	//Number - The centre starting value
+	scaleStartValue : 10,
+	
+	//Boolean - Show line for each value in the scale
+	scaleShowLine : true,
+	
+	//String - The colour of the scale line
+	scaleLineColor : "rgba(0,0,0,.1)",
+	
+	//Number - The width of the line - in pixels
+	scaleLineWidth : 1,
+	
+	//Boolean - whether we should show text labels
+	scaleShowLabels : true,
+	
+	//Interpolated JS string - can access value
+	scaleLabel : "<%=value%>",
+	
+	//String - Scale label font declaration for the scale label
+	scaleFontFamily : "'Arial'",
+	
+	//Number - Scale label font size in pixels	
+	scaleFontSize : 12,
+	
+	//String - Scale label font weight style	
+	scaleFontStyle : "normal",
+	
+	//String - Scale label font colour	
+	scaleFontColor : "#666",
+	
+	//Boolean - Show a backdrop to the scale label
+	scaleShowLabelBackdrop : true,
+	
+	//String - The colour of the label backdrop	
+	scaleBackdropColor : "rgba(255,255,255,0.75)",
+	
+	//Number - The backdrop padding above & below the label in pixels
+	scaleBackdropPaddingY : 2,
+	
+	//Number - The backdrop padding to the side of the label in pixels	
+	scaleBackdropPaddingX : 2,
+
+	//Boolean - Stroke a line around each segment in the chart
+	segmentShowStroke : true,
+	
+	//String - The colour of the stroke on each segement.
+	segmentStrokeColor : "#fff",
+	
+	//Number - The width of the stroke value in pixels	
+	segmentStrokeWidth : 2,
+	
+	//Boolean - Whether to animate the chart or not
+	animation : true,
+	
+	//Number - Amount of animation steps
+	animationSteps : 100,
+	
+	//String - Animation easing effect.
+	animationEasing : "easeOutBounce",
+
+	//Boolean - Whether to animate the rotation of the chart
+	animateRotate : true,
+	
+	//Boolean - Whether to animate scaling the chart from the centre
+	animateScale : false,
+
+	//Function - This will fire when the animation of the chart is complete.
+	onAnimationComplete : null
+
+	}
+
+	new Chart(document.getElementById("viz-3").getContext("2d")).PolarArea(data, options);
+
+
+		var barChartData = {
+			labels : ["Africa","Eastern Mediterranean","South-East Asia","Western Pacific","Americas","Europe",],
+			datasets : [
+				{
+					fillColor : "rgba(56,320,120,0.9)",
+					strokeColor : "rgba(56,320,120,1)",
+					data : [36,77,65,75,82,97]
+				}
+			]
+			
+		}
+
+var options = {
+				
+	//Boolean - If we show the scale above the chart data			
+	scaleOverlay : false,
+	
+	//Boolean - If we want to override with a hard coded scale
+	scaleOverride : true,
+	
+	//** Required if scaleOverride is true **
+	//Number - The number of steps in a hard coded scale
+	scaleSteps : 9,
+	//Number - The value jump in the hard coded scale
+	scaleStepWidth : 10,
+	//Number - The scale starting value
+	scaleStartValue : 10,
+
+	//String - Colour of the scale line	
+	scaleLineColor : "rgba(34,265,456,.1)",
+	
+	//Number - Pixel width of the scale line	
+	scaleLineWidth : 1,
+
+	//Boolean - Whether to show labels on the scale	
+	scaleShowLabels : true,
+	
+	//Interpolated JS string - can access value
+	scaleLabel : "<%=value%>",
+	
+	//String - Scale label font declaration for the scale label
+	scaleFontFamily : "'Arial'",
+	
+	//Number - Scale label font size in pixels	
+	scaleFontSize : 12,
+	
+	//String - Scale label font weight style	
+	scaleFontStyle : "normal",
+	
+	//String - Scale label font colour	
+	scaleFontColor : "#666",	
+	
+	///Boolean - Whether grid lines are shown across the chart
+	scaleShowGridLines : true,
+	
+	//String - Colour of the grid lines
+	scaleGridLineColor : "rgba(0,0,0,.05)",
+	
+	//Number - Width of the grid lines
+	scaleGridLineWidth : 1,	
+
+	//Boolean - If there is a stroke on each bar	
+	barShowStroke : true,
+	
+	//Number - Pixel width of the bar stroke	
+	barStrokeWidth : 2,
+	
+	//Number - Spacing between each of the X value sets
+	barValueSpacing : 5,
+	
+	//Number - Spacing between data sets within X values
+	barDatasetSpacing : 1,
+	
+	//Boolean - Whether to animate the chart
+	animation : true,
+
+	//Number - Number of animation steps
+	animationSteps : 60,
+	
+	//String - Animation easing effect
+	animationEasing : "easeOutQuart",
+
+	//Function - Fires when the animation is complete
+	onAnimationComplete : null
+	
+}
+
+	
+	</script>
+
+
+<body>
+</html>
