@@ -1,36 +1,55 @@
+/* 
+TIPOGRAFIAS 
+*/
 @import url(http://fonts.googleapis.com/css?family=Droid+Sans:400);
 @import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700);
 
+
+/* 
+VALORES GENERALES 
+*/
+.col-main { color: #008EC4; }
+.col-bg-main { background-color: #008EC4; }
+
+/* Western Pacific (Verde) */
+.col-wp { color: #7AB73A; } /* RGB: 119,171,115 */
+.col-bg-wp { background-color: #7AB73A; } /* RGB: 119,171,115 */
+
+/* South East Asia (Azul) */
+.col-sea { color: #5376A0; } /* RGB: 82,118,160 */
+.col-bg-sea { background-color: #5376A0; } /* RGB: 82,118,160 */
+
+/* Europe (Violeta) */
+.col-eu { color: #995080; } /* RGB: 153,80,128 */
+.col-bg-eu { background-color: #995080; } /* RGB: 153,80,128 */
+
+/* Eastern Mediterranean (Amarillo) */
+.col-em { color: #F5E38A; } /* RGB: 245,227,138 */
+.col-bg-em { background-color: #F5E38A; } /* RGB: 245,227,138 */
+
+/* Americas (Naranja) */
+.col-am { color: #EF9169; } /* RGB: 239,145,105 */
+.col-bg-am { background-color: #EF9169; } /* RGB: 239,145,105 */
+
+/* Africa (Rojo) */
+.col-af { color: #D5716A; } /* RGB: 213,113,106  */
+.col-bg-af { background-color: #D5716A; } /* RGB: 213,113,106  */
+
+.col-white { color: white; }
+
+
+/* 
+TAGS PRINCIPALES 
+*/
 body {
   background-color: #dddddd;
+  color: #8C8C8C;
   text-align: center;
   font-family: 'Droid Serif', sans-serif;
 }
 
+h1, h2, h3, h4, h5, h6 { color: #000000; }
 
-.viz {
-  padding-bottom: 60px;
-  border: 1px dotted rgba(0,0,0,0.1);
-  background-color: white;
-  margin-bottom: 20px;
-  margin-top: 20px;
-}
-
-
-li {
-  margin: 8px 10px;
-  padding: 0 6px; 
-  text-align: left;
-  border-bottom: 1px dotted rgba(0,0,0,.2);
-}
-
-i {
-  margin-right: 10px; 
-}
-
-canvas {
-  margin-bottom: 20px;
-}
 
 h1 {
   border-bottom: 1px dotted rgba(0,0,0,.2);
@@ -69,7 +88,7 @@ h4 {
 }
 
 p {
-  color:#646464;
+  color: #8C8C8C;
   font-weight: 400;
   margin: 40px;
 
@@ -82,23 +101,45 @@ a {
   font-style: italic
 }
 
+li {
+  margin: 8px 10px;
+  padding: 0 6px; 
+  text-align: left;
+  border-bottom: 1px dotted rgba(0,0,0,.2);
+}
+
+i {
+  margin-right: 10px; 
+}
+
+canvas {
+  margin-bottom: 20px;
+}
 
 
+/*
+CLASES PRINCIPALES
+*/
+.viz {
+  padding-bottom: 60px;
+  border: 1px dotted rgba(0,0,0,0.1);
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
 
-/* Gender Colors */
+/*
+AUTOR
+*/
+
 .male {
   color:#80dfd9;
   
 }
+
 .female {
   color:#fd2363;
-  
 }
-
-
-
-
-/* Data background-Colors*/
 
 /*Mujer*/
 .c-female .one {
@@ -146,9 +187,6 @@ a {
 }
 
 
-
-
-
 /* Hombre*/
 .c-male .one {
   color:#80dfd9;
@@ -193,5 +231,3 @@ a {
 .c-male .eleven {
   color:#00c400;
 }
-
-
