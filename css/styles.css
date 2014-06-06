@@ -84,8 +84,9 @@ h3 {
   color:#000;
   font-weight: 400;
   font-size: 22px;
-  line-height: 22px;
-  padding: 0 40px;   
+  line-height: 28px;
+  padding: 0 40px; 
+  margin-top: 0px;  
 }
 
 h4 {
