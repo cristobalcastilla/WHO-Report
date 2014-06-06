@@ -5,6 +5,9 @@ jQuery(document).ready(function($) {
   var containerWidth = $container.width();
   columnWidth = containerWidth/12;
 
+  var sans = 'Droid Sans';
+  var serif = 'Droid Serif';
+
   // VIZ 1  
   id = 'viz01';
   type = 'bar';
@@ -41,7 +44,8 @@ jQuery(document).ready(function($) {
     scaleStartValue: 50,
     scaleLabel: "<%=value%> years",
 
-    // scaleFontFamily: "'Droid Serif'",
+    scaleFontFamily: sans,
+    // scaleFontStyle: 700,
     // scaleFontColor: "#000",
     
     // scaleShowGridLines: false, ///Boolean - Whether grid lines are shown across the chart
