@@ -8,8 +8,13 @@ TIPOGRAFIAS
 /* 
 VALORES GENERALES 
 */
+
 .col-main { color: #008EC4; }
 .col-bg-main { background-color: #008EC4; }
+
+.col-white { color: white; }
+
+.col-bg-gray { color: #ECECEC; }
 
 /* Western Pacific (Verde) */
 .col-wp { color: #7AB73A; } /* RGB: 119,171,115 */
@@ -35,7 +40,8 @@ VALORES GENERALES
 .col-af { color: #D5716A; } /* RGB: 213,113,106  */
 .col-bg-af { background-color: #D5716A; } /* RGB: 213,113,106  */
 
-.col-white { color: white; }
+
+
 
 
 /* 
