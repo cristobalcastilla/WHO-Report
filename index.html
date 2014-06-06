@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Clase 2 - Data Visualization</title>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+  <link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+  
+
+  <!-- Javascripts -->
+  <script src="js/jquery-1.11.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/Chart.min.js"></script>
+
+</head>
+
+  <body>
+    
+    <div class="container">
+
+    <!-- Visualización -->
+      <div class="viz">
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h1>&iquest;Qui&eacute;n vive por m&aacute;s tiempo, los <span class="male"> hombres</span> o las <span class="female"> mujeres</span>?</h1>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-12">
+            <h2><i class="fa fa-male male"></i> vs. <i class="fa fa-female female"></i></h2>
+            <canvas id="viz01" height="400" width="950"></canvas>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+          <p>Este gr&aacute;fico nos muestra cual de los g&eacute;neros vive por m&aacute;s tiempo, claramente podemos ver como la mujer vive por m&aacute;s tiempo en la mayor&iacute;a de los continentes, con la excepci&oacute;n del continente Africano y el Sur Este Asi&aacute;tico.</p>
+          <p>Fuente<br><a href="http://apps.who.int/gho/data/view.main.690?lang=en">Global Health Observatory Data Repository</a>.</p>
+          </div>
+        </div>
+      </div>
+
+
+
+      <!-- Visualización -->
+      <div class="viz">
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <h1>&iquest;Cu&aacute;l es la causa de muerte m&aacute;s com&uacute;n del <span class="male">hombre</span> y la <span class="female">mujer?</span></h1>
+            
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-4 col-md-offset-2">
+            <h2><i class="fa fa-male"></i></h2>
+            <h3>En el 2011 hubo un total de <strong class="male">34.069.392 Hombres muertos</strong> por las siguientes causas:</h3>
+            <canvas id="viz02" height="350" width="350"></canvas>            
+            <div class="c-male">
+              <ol>
+                <li ><i class="fa fa-stop one"></i>Cardiovascular diseases</li>
+                <li ><i class="fa fa-stop two"></i>Malignant neoplasms</li>
+                <li ><i class="fa fa-stop three"></i>Ischaemic heart disease</li>
+                <li ><i class="fa fa-stop four"></i>Infectious and parasitic diseases</li>
+                <li ><i class="fa fa-stop five"></i>Injuries</li>
+                <li ><i class="fa fa-stop six"></i>Stroke</li>
+                <li ><i class="fa fa-stop seven"></i>Unintentional injuries</li>
+                <li ><i class="fa fa-stop eight"></i>Respiratory diseases</li>
+                <li ><i class="fa fa-stop nine"></i>Chronic obstructive pulmonary disease</li>
+                <li ><i class="fa fa-stop ten"></i>Respiratory infections</li>
+              </ol>
+            </div>
+
+          </div>
+
+          <!-- <div class="col-md-2">
+            <h1>Vs.</h1>
+          </div> -->
+          
+          <div class="col-md-4">
+            <h2><i class="fa fa-female"></i></h2>
+            <h3>En el 2011 hubo un total de <strong class="female">29.473.662 Mujeres muertas</strong> por las siguientes causas:</h3>
+            <canvas id="viz03" height="350" width="350"></canvas>
+
+            <div class="c-female">
+              <ol>
+                <li ><span><i class="fa fa-stop one"></i></span>Cardiovascular diseases</li>
+                <li ><span><i class="fa fa-stop two"></i></span>Malignant neoplasms</li>
+                <li ><span><i class="fa fa-stop three"></i></span>Ischaemic heart disease</li>
+                <li ><span><i class="fa fa-stop four"></i></span>Stroke</li>
+                <li ><span><i class="fa fa-stop five"></i></span>Infectious and parasitic diseases</li>
+                <li ><span><i class="fa fa-stop six"></i></span>Respiratory diseases</li>
+                <li ><span><i class="fa fa-stop seven"></i></span>Injuries</li>
+                <li ><span><i class="fa fa-stop eight"></i></span>Respiratory infections</li>
+                <li ><span><i class="fa fa-stop nine"></i></span>Lower respiratory infections</li>
+                <li ><span><i class="fa fa-stop ten"></i></span>Chronic obstructive pulmonary disease</li>
+              </ol>
+            </div>
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6 col-md-offset-3">
+            <p>Este gr&aacute;fico muestra diez de las causas de muerte m&aacute;s com&uacute;n por genero. Se aprecia como las enfermedades cardiovasculares es la causa de muerte m&aacute;s com&uacute;n entre hombres y mujeres; Mucho m&aacute;s com&uacute;n en los hombres que duplican en cantidad de muertes a las mujeres.</p>
+            <p>Fuente<br><a href="http://apps.who.int/gho/data/node.main.CODWORLD?lang=en">Global Health Observatory Data Repository</a>.</p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+    <script>
+
+    // Region, Male, Female
+      var barChartData = {
+
+
+      labels : ["Africa", "Eastern Mediterranean", "South-East Asia", "Western Pacific", "Americas", "Europe"],
+        datasets : [
+          {
+            fillColor : "#80dfd9",
+            data : [74, 56, 74, 66, 72, 66]
+          },
+          {
+            fillColor : "#fd2363",
+            data : [59, 70, 69, 78, 79, 80]
+          }
+        ]
+      }
+
+      var myLine = new Chart(document.getElementById("viz01")
+                              .getContext("2d"))
+                              .Bar(barChartData, {scaleOverlay:true, 
+
+                                                  // Escala manual
+                                                  scaleOverride : true,
+                                                  scaleSteps : 10,
+                                                  scaleStepWidth : 5,
+                                                  scaleStartValue : 50,
+                                                  scaleLabel : "<%=value%> years",
+
+                                                  scaleFontFamily : "'Droid Serif'",
+                                                  scaleFontColor : "#000",
+
+                                                  ///Boolean - Whether grid lines are shown across the chart
+                                                  scaleShowGridLines : false,
+                                                  
+                                                  //String - Colour of the grid lines
+                                                  scaleGridLineColor : "rgba(0,0,0,.1)",
+                                                  
+                                                  //Number - Width of the grid lines
+                                                  scaleGridLineWidth : 1, 
+
+                                                  //Boolean - If there is a stroke on each bar  
+                                                  barShowStroke : false,
+                                                  
+                                                  //Number - Pixel width of the bar stroke  
+                                                  barStrokeWidth : 0,
+                                                  
+                                                  //Number - Spacing between each of the X value sets
+                                                  barValueSpacing : 40,
+                                                  
+                                                  //Number - Spacing between data sets within X values
+                                                  barDatasetSpacing : 4,
+                                                  
+                                                  //Boolean - Whether to animate the chart
+                                                  animation : true,
+
+                                                  //Number - Number of animation steps
+                                                  animationSteps : 60,
+                                                  
+                                                  //String - Animation easing effect
+                                                  animationEasing : "easeOutQuart",
+
+                                                  });
+      
+      var doughnutData_male = [
+                  { value: 28978374, color:"#80dfd9" },
+                  { value : 8211415.5, color : "#6db2d8" },
+                  { value : 4387469.5, color : "#5986d7" },
+                  { value : 3727145.5, color : "#4659d5" },
+                  { value : 3634825.2, color : "#322dd4" },
+                  { value : 3330838.8, color : "#1f00d3" },
+                  { value : 2948084.5, color : "#1927a9" },
+                  { value : 2357453.5, color : "#134e7f" },
+                  { value : 2174696.2, color : "#0c7654" },
+                  {value: 1632304.5, color : "#069d2a"}
+                ]
+
+
+      var doughnutData_female = [
+                  { value: 8374177, color:"#fd2363" },
+                  { value : 3482283, color : "#fd4a63" },
+                  { value : 3297584, color : "#fd7163" },
+                  { value : 3297218, color : "#fd9763" },
+                  { value : 3218251.8, color : "#fdbe63" },
+                  { value : 1706003.5, color : "#fde563" },
+                  { value : 1639901.6, color : "#fdce82" },
+                  { value : 1580238.2, color : "#feb7a1" },
+                  { value : 1575622.2, color : "#fea1c1" },
+                  { value : 1302382, color : "#ff8ae0" }
+
+                ]
+
+
+      var defaults = {
+          segmentShowStroke : false,
+          segmentStrokeColor : "#dddddd",
+          percentageInnerCutout : 80,
+          animation : true,
+          animationSteps : 60,
+          animationEasing : "easeOutQuart",
+          animateRotate : true,
+        }
+
+      var myDoughnut_male = new Chart(document.getElementById("viz02").getContext("2d")).Doughnut(doughnutData_male, defaults);
+
+      var myDoughnut_female = new Chart(document.getElementById("viz03").getContext("2d")).Doughnut(doughnutData_female, defaults);
+
+      
+                      
+
+    </script>
+
+  </body>
+
+</html>

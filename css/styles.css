@@ -1,0 +1,196 @@
+@import url(http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic);
+
+body {
+  background-color: #dddddd;
+  text-align: center;
+  font-family: 'Droid Serif', sans-serif;
+}
+
+
+.viz {
+  padding-bottom: 60px;
+  border: 1px dotted rgba(0,0,0,0.1);
+  background-color: white;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+
+li {
+  margin: 8px 10px;
+  padding: 0 6px; 
+  text-align: left;
+  border-bottom: 1px dotted rgba(0,0,0,.2);
+}
+
+i {
+  margin-right: 10px; 
+}
+
+canvas {
+  margin-bottom: 20px;
+}
+
+h1 {
+  border-bottom: 1px dotted rgba(0,0,0,.2);
+  color:#4c4c4c;
+  font-weight: 400;
+  /*text-transform: uppercase;*/
+  font-size: 48px;
+  margin-top: 40px;
+  letter-spacing: -0.5px;
+  margin-top: 80px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+h2 {
+  color:#4c4c4c;
+  font-weight: 700;
+  margin: 20px;
+}
+
+h3 {
+  color:#4c4c4c;
+  font-weight: 400;
+  font-size: 16px;
+  font-style: italic;
+  line-height: 22px;
+  margin: 20px 100px;
+}
+
+h4 {
+  color:#4c4c4c;
+  font-weight: 400;
+  font-size: 14px;
+  font-style: italic;
+  line-height: 22px;
+}
+
+p {
+  color:#646464;
+  font-weight: 400;
+  margin: 40px;
+
+}
+
+a {
+  color:white;
+  background-color: #4c4c4c;
+  padding: 2px 4px;
+  font-style: italic
+}
+
+
+
+
+/* Gender Colors */
+.male {
+  color:#80dfd9;
+  
+}
+.female {
+  color:#fd2363;
+  
+}
+
+
+
+
+/* Data background-Colors*/
+
+/*Mujer*/
+.c-female .one {
+  color:#fd2363;
+}
+
+.c-female .two {
+  color:#fd4a63;
+}
+
+.c-female .three {
+  color:#fd7163;
+}
+
+.c-female .four {
+  color:#fd9763;
+}
+
+.c-female .five {
+  color:#fdbe63;
+}
+
+.c-female .six {
+  color:#fde563;
+}
+
+.c-female .seven {
+  color:#fdce82;
+}
+
+.c-female .eight {
+  color:#feb7a1;
+}
+
+.c-female .nine {
+  color:#fea1c1;
+}
+
+.c-female .ten {
+  color:#ff8ae0;
+}
+
+.c-female .eleven {
+  color:#b853b8;
+}
+
+
+
+
+
+/* Hombre*/
+.c-male .one {
+  color:#80dfd9;
+}
+
+.c-male .two {
+  color:#6db2d8;
+}
+
+.c-male .three {
+  color:#5986d7;
+}
+
+.c-male .four {
+  color:#4659d5;
+}
+
+.c-male .five {
+  color:#322dd4;
+}
+
+.c-male .six {
+  color:#1f00d3;
+}
+
+.c-male .seven {
+  color:#1927a9;
+}
+
+.c-male .eight {
+  color:#134e7f;
+}
+
+.c-male .nine {
+  color:#0c7654;
+}
+
+.c-male .ten {
+  color:#069d2a;
+}
+
+.c-male .eleven {
+  color:#00c400;
+}
+
+
