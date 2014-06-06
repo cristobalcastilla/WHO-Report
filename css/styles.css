@@ -44,7 +44,7 @@ TAGS PRINCIPALES
 body {
   background-color: #dddddd;
   color: #8C8C8C;
-  text-align: center;
+  text-align: left;
   font-family: 'Droid Serif', sans-serif;
 }
 
@@ -133,6 +133,7 @@ AUTOR
 */
 
 .header {
-  padding: 10px;
+  padding: 25px;
+  text-align: left;
 }
 
