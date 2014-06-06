@@ -8,6 +8,66 @@ jQuery(document).ready(function($) {
   var sans = 'Droid Sans';
   var serif = 'Droid Serif';
 
+  // mortandad infantil
+  type = 'line';
+  id = 'viz-2-1';
+  c = 12;
+  h = 500;
+  data = {
+    labels : ["Africa","America","Eastern Mediterranean","Europa","South-East Asia","Western Pacific","Global"],
+    datasets : [
+      {
+        fillColor : "rgba(140,140,140,0.5)",
+        strokeColor : "rgba(140,140,140,1)",
+        pointColor : "rgba(140,140,140,1)",
+        pointStrokeColor : "#fff",
+        data : [3893,418,1172,228,3156,848,9716]
+      },
+      {
+        fillColor : "rgba(0,142, 196,0.5)",
+        strokeColor : "rgba(0,142, 196,1)",
+        pointColor : "rgba(0,142, 196,1)",
+        pointStrokeColor : "#fff",
+        data : [3129,239,915,141,1806,424,6640]
+      }
+    ]
+  }
+
+  // createChart(type, id, c, h, data);
+
+
+
+  // inmunización
+  type = 'radar';
+  id = 'viz-2-2';
+  c = 12;
+  h = 500;
+  data = {
+    labels : ["2000","2006","2012"],
+    datasets : [
+      //Hepatisis B
+      {
+        fillColor : "rgba(245,227,138,0.5)",
+        strokeColor : "rgba(245,227,138,1)",
+        pointColor : "rgba(245,227,138,1)",
+        pointStrokeColor : "#fff",
+        data : [39,66,81]
+      },
+      //DTP3
+      {
+        fillColor : "rgba(245,227,138,0.5)",
+        strokeColor : "rgba(245,227,138,1)",
+        pointColor : "rgba(245,227,138,1)",
+        pointStrokeColor : "#fff",
+        data : [63,83,83]
+      }
+    ]
+  }
+
+  // createChart(type, id, c, h, data);
+
+
+
   // desnutricion + obesidad
   type = 'line';
   id = 'viz-3-3';

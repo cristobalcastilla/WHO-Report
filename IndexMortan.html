@@ -1,0 +1,50 @@
+<!doctype html>
+<html>
+<head>
+	<title>Factores de riesgo en la actualidad</title>
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!-- Javascripts -->
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/Chart.min.js" type="text/javascript"></script>
+</head>
+<body>
+	<head>
+		<h1>Indice de Mortandad (miles)</h1>
+		<script src="../Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		
+	</head>
+	<body>
+		<canvas id="canvas" height="450" width="600"></canvas>
+	<script>
+		var lineChartData = {
+			labels : ["Africa","America","Eastern Mediterranean","Europa","South-East Asia","Western Pacific","Global"],
+			datasets : [
+				<!--2000-->
+				{
+					fillColor : "rgba(140,140,140,0.5)",
+					strokeColor : "rgba(140,140,140,1)",
+					pointColor : "rgba(140,140,140,1)",
+					pointStrokeColor : "#fff",
+					data : [3893,418,1172,228,3156,848,9716]
+				},
+				<!--2012-->
+				{
+					fillColor : "rgba(0,142, 196,0.5)",
+					strokeColor : "rgba(0,142, 196,1)",
+					pointColor : "rgba(0,142, 196,1)",
+					pointStrokeColor : "#fff",
+					data : [3129,239,915,141,1806,424,6640]
+				}
+			]
+			
+		}
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Line(lineChartData);
+	
+	</script>
+	</body>
+</html>
