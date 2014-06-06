@@ -8,9 +8,41 @@ jQuery(document).ready(function($) {
   var sans = 'Droid Sans';
   var serif = 'Droid Serif';
 
+  // desnutricion + obesidad
+  type = 'line';
+  id = 'viz-3-3';
+  c = 12;
+  h = 500;
+  data = {
+    labels : ["África","Américas","Asia Sudoriental","Europa","Mediterráneo Oriental","Pacífico Occidental","Global"],
+    datasets : [
+      <!--//Bajo Peso: celeste-->
+      {
+        fillColor : "rgba(0,142,196,0.5)",
+        strokeColor : "rgba(0,142,196,1)",
+        pointColor : "rgba(0,142,196,1)",
+        pointStrokeColor : "#fff",
+        data : [36.3,1.5,46.9,0.8,9.8,4.8,98.6]
+      },
+      <!--//Obesos gris-->
+      {
+        fillColor : "rgba(140,140,140,0.5)",
+        strokeColor : "rgba(140,140,140,1)",
+        pointColor : "rgba(140,140,140,1)",
+        pointStrokeColor : "#fff",
+        data : [9.5,5.8,6.7,6.7,5.8,6.5,43.7]
+      }
+    ]
+  }
+
+  createChart(type, id, c, h, data);
+
+
+
+
   // agua potable y saneamiento - a 
-  id = 'viz-4-1-2-a';
   type = 'bar';
+  id = 'viz-4-1-2-a';
   c = 6;
   h = 500;
 
@@ -60,6 +92,9 @@ jQuery(document).ready(function($) {
 
   createChart(type, id, c, h, data, options);
 
+
+
+
   // agua potable y saneamiento - b
   id = 'viz-4-1-2-b';
   data = {
@@ -101,9 +136,205 @@ jQuery(document).ready(function($) {
 
   createChart(type, id, c, h, data, options);
 
-  // personal calificado en el parto
-  id = 'viz-4-2-2';
+
+
+
+  // Compromiso y Desembolso
+  type = 'bar';
+  id = 'viz-4-2-1-a';
+  c = 6;
+  h = 500;
+  data = {
+    <!-- // labels: Bolivia, Chile, Nigeria, Côte dIvoire, Egypt, Syrian Arab Republic,Turkey, The former Yugoslav Republic of Macedonia, India, Thailand, Papua New Guinea, China-->
+    labels : ["l1"],
+    datasets : [
+      <!-- //Compromiso y Desembolso (intercalados)-->
+      {
+        fillColor : "rgba(239,145,105,1)",
+        strokeColor : "#ffffff",
+        data : [93.41]
+        
+      },
+      {
+        fillColor : "rgba(239,145,105,0.5)",
+        strokeColor : "#ffffff)",
+        data : [42.01]
+      },
+      {
+        fillColor : "rgba(239,145,105,1)",
+        strokeColor : "#ffffff",
+        data : [0.72]
+      },
+      {
+        fillColor : "rgba(239,145,105,0.5)",
+        strokeColor : "#ffffff)",
+        data : [3.45]
+      },
+      {
+        fillColor : "rgba(213,113,106,1)",
+        strokeColor : "#ffffff",
+        data : [367.12]
+      },
+        {
+        fillColor : "rgba(213,113,106,0.5)",
+        strokeColor : "#ffffff)",
+        data : [30.28]
+      },
+      {
+        fillColor : "rgba(213,113,106,1)",
+        strokeColor : "#ffffff",
+        data : [9.75]
+      },
+      {
+        fillColor : "rgba(213,113,106,0.5)",
+        strokeColor : "#ffffff)",
+        data : [15.31]
+      },
+      {
+        fillColor : "rgba(245,227,138,1)",
+        strokeColor : "#ffffff",
+        data : [92.03]
+      },
+      {
+        fillColor : "rgba(245,227,138,0.5)",
+        strokeColor : "#ffffff)",
+        data : [3.9]
+      },
+      {
+        fillColor : "rgba(245,227,138,1)",
+        strokeColor : "#ffffff",
+        data : [0.88]
+      },
+      {
+        fillColor : "rgba(245,227,138,0.5)",
+        strokeColor : "#ffffff)",
+        data : [0.78]
+      },
+      {
+        fillColor : "rgba(153,80,128,1)",
+        strokeColor : "#ffffff",
+        data : [92.26]
+      },
+      {
+        fillColor : "rgba(153,80,128,0.5)",
+        strokeColor : "#ffffff)",
+        data : [0.83]
+      },
+      {
+        fillColor : "rgba(153,80,128,1)",
+        strokeColor : "#ffffff",
+        data : [1.18]
+      },
+      {
+        fillColor : "rgba(153,80,128,0.5)",
+        strokeColor : "#ffffff)",
+        data : [10.52]
+      },
+      {
+        fillColor : "rgba(82,118,160,1)",
+        strokeColor : "#ffffff",
+        data : [714.76]
+      },
+      {
+        fillColor : "rgba(82,118,160,0.5)",
+        strokeColor : "#ffffff)",
+        data : [480.31]
+      },
+      {
+        fillColor : "rgba(82,118,160,1)",
+        strokeColor : "#ffffff",
+        data : [6.73]
+      },
+      {
+        fillColor : "rgba(82,118,160,0.5)",
+        strokeColor : "#ffffff)",
+        data : [22.39]
+      },
+      {
+        fillColor : "rgba(119,171,115,1)",
+        strokeColor : "#ffffff",
+        data : [161.97]
+      },
+      {
+        fillColor : "rgba(119,171,115,0.5)",
+        strokeColor : "#ffffff)",
+        data : [44.12]
+      },
+      {
+        fillColor : "rgba(119,171,115,1)",
+        strokeColor : "#ffffff",
+        data : [80.9]
+      },
+      {
+        fillColor : "rgba(119,171,115,0.5)",
+        strokeColor : "#ffffff)",
+        data : [173.58]
+      }
+    ] 
+  }
+
+  createChart(type, id, c, h, data);
+
+
+
+
+  // cobertura salud
   type = 'polar';
+  id = 'viz-4-2-1-b';
+  c = 6;
+  h = 500;
+
+  data = [
+    <!--//Africa-->
+    {
+      value : 38.4,
+      color: "#D5716A"
+    },
+    <!--//Americas-->
+    {
+      value : 895.5,
+      color: "#EF9169"
+    },
+    <!--//Asia Sudoriental-->
+    {
+      value : 19.5,
+      color: "#5376A0"
+    },
+    <!--//Europa-->
+    {
+      value : 898.6,
+      color: "#995080"
+    },
+    <!--//Mediterraneo Oriental-->
+    {
+      value : 81.9,
+      color: "#F5E38A"
+    },
+    <!--//Pacifico Occidental-->
+    {
+      value : 188.9,
+      color: "#7AB73A"
+    },
+    <!--//Global: gris institucional-->
+    {
+      value : 318.3,
+      color: "#8C8C8C"
+    }
+  ];
+
+  createChart(type, id, c, h, data);
+
+
+
+
+
+
+
+
+
+  // personal calificado en el parto
+  type = 'polar';
+  id = 'viz-4-2-2';
   c = 12;
   h = 500;
   
@@ -134,9 +365,7 @@ jQuery(document).ready(function($) {
     }
   ];
 
-  options = {};
-
-  createChart(type, id, c, h, data, options);
+  createChart(type, id, c, h, data);
 
 });
 

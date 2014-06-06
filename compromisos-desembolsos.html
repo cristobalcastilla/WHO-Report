@@ -1,0 +1,172 @@
+	<!doctype html>
+<html>
+
+<head>
+
+	<title>Objetivos Futuros</title>
+
+	<!-- CSS -->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="css/fontawesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+
+	<!-- Javascripts -->
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/Chart.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+	<head>
+		<h1>Compromiso vs. Desembolso de Pa&iacute;ses Recipientes (2000)</h1>
+		<script src="../Chart.js"></script>
+		<meta name = "viewport" content = "initial-scale = 1, user-scalable = no">
+		<style>
+			canvas{
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas" height="450" width="600"></canvas>
+
+
+	<script>
+
+		var barChartData = {
+			<!-- // labels: Bolivia, Chile, Nigeria, Côte dIvoire, Egypt, Syrian Arab Republic,Turkey, The former Yugoslav Republic of Macedonia, India, Thailand, Papua New Guinea, China-->
+			labels : ["l1"],
+			datasets : [
+				<!-- //Compromiso y Desembolso (intercalados)-->
+				{
+					fillColor : "rgba(239,145,105,1)",
+					strokeColor : "#ffffff",
+					data : [93.41]
+					
+				},
+				{
+					fillColor : "rgba(239,145,105,0.5)",
+					strokeColor : "#ffffff)",
+					data : [42.01]
+				},
+				{
+					fillColor : "rgba(239,145,105,1)",
+					strokeColor : "#ffffff",
+					data : [0.72]
+				},
+				{
+					fillColor : "rgba(239,145,105,0.5)",
+					strokeColor : "#ffffff)",
+					data : [3.45]
+				},
+				{
+					fillColor : "rgba(213,113,106,1)",
+					strokeColor : "#ffffff",
+					data : [367.12]
+				},
+					{
+					fillColor : "rgba(213,113,106,0.5)",
+					strokeColor : "#ffffff)",
+					data : [30.28]
+				},
+				{
+					fillColor : "rgba(213,113,106,1)",
+					strokeColor : "#ffffff",
+					data : [9.75]
+				},
+				{
+					fillColor : "rgba(213,113,106,0.5)",
+					strokeColor : "#ffffff)",
+					data : [15.31]
+				},
+				{
+					fillColor : "rgba(245,227,138,1)",
+					strokeColor : "#ffffff",
+					data : [92.03]
+				},
+				{
+					fillColor : "rgba(245,227,138,0.5)",
+					strokeColor : "#ffffff)",
+					data : [3.9]
+				},
+				{
+					fillColor : "rgba(245,227,138,1)",
+					strokeColor : "#ffffff",
+					data : [0.88]
+				},
+				{
+					fillColor : "rgba(245,227,138,0.5)",
+					strokeColor : "#ffffff)",
+					data : [0.78]
+				},
+				{
+					fillColor : "rgba(153,80,128,1)",
+					strokeColor : "#ffffff",
+					data : [92.26]
+				},
+				{
+					fillColor : "rgba(153,80,128,0.5)",
+					strokeColor : "#ffffff)",
+					data : [0.83]
+				},
+				{
+					fillColor : "rgba(153,80,128,1)",
+					strokeColor : "#ffffff",
+					data : [1.18]
+				},
+				{
+					fillColor : "rgba(153,80,128,0.5)",
+					strokeColor : "#ffffff)",
+					data : [10.52]
+				},
+				{
+					fillColor : "rgba(82,118,160,1)",
+					strokeColor : "#ffffff",
+					data : [714.76]
+				},
+				{
+					fillColor : "rgba(82,118,160,0.5)",
+					strokeColor : "#ffffff)",
+					data : [480.31]
+				},
+				{
+					fillColor : "rgba(82,118,160,1)",
+					strokeColor : "#ffffff",
+					data : [6.73]
+				},
+				{
+					fillColor : "rgba(82,118,160,0.5)",
+					strokeColor : "#ffffff)",
+					data : [22.39]
+				},
+				{
+					fillColor : "rgba(119,171,115,1)",
+					strokeColor : "#ffffff",
+					data : [161.97]
+				},
+				{
+					fillColor : "rgba(119,171,115,0.5)",
+					strokeColor : "#ffffff)",
+					data : [44.12]
+				},
+				{
+					fillColor : "rgba(119,171,115,1)",
+					strokeColor : "#ffffff",
+					data : [80.9]
+				},
+				{
+					fillColor : "rgba(119,171,115,0.5)",
+					strokeColor : "#ffffff)",
+					data : [173.58]
+				}
+				
+				
+
+			]
+			
+		}
+
+	var myLine = new Chart(document.getElementById("canvas").getContext("2d")).Bar(barChartData);
+	
+	</script>
+	</body>
+</html>
