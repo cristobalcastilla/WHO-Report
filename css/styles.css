@@ -76,15 +76,14 @@ h1 {
 h2 {
   color:#008EC4;
   font-size: 30px;
-  font-weight: 700;
+  font-weight: 400;
   margin: 22px;
 }
 
 h3 {
-  color:#4c4c4c;
+  color:#000;
   font-weight: 400;
-  font-size: 16px;
-  font-style: italic;
+  font-size: 22px;
   line-height: 22px;
   margin: 20px 100px;
 }
@@ -92,13 +91,35 @@ h3 {
 h4 {
   color:#4c4c4c;
   font-weight: 400;
-  font-size: 14px;
-  font-style: italic;
+  font-size: 13px;
+  font-family: 'Droid Sans';
+  text-transform: uppercase;
   line-height: 22px;
+}
+
+p.mays {
+  color: #8C8C8C;
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  text-transform: uppercase;
+  font-weight: 400;
+  margin: 40px;
+
 }
 
 p {
   color: #8C8C8C;
+  font-size: 12px;
+  font-family: 'Droid Sans';
+  font-weight: 400;
+  margin: 40px;
+
+}
+
+indicator {
+  color: #8C8C8C;
+  font-size: 12px;
+  font-family: 'Droid Sans';
   font-weight: 400;
   margin: 40px;
 
