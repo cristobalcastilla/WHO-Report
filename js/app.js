@@ -469,7 +469,7 @@ jQuery(document).ready(function($) {
   type = 'polar';
   id = 'viz-4-2-2';
   c = 12;
-  h = 500;
+  h = 300;
   data = [
     {
       value : 51,
