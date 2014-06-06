@@ -100,6 +100,9 @@ jQuery(document).ready(function($) {
   };
 
   createChart(type, id, c, h, data, options);
+
+  // personal calificado en el parto
+  // viz-4-2-2
 });
 
 function createChart (type, id, columns, height, data, options) {
