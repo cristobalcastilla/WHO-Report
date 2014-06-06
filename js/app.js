@@ -102,7 +102,42 @@ jQuery(document).ready(function($) {
   createChart(type, id, c, h, data, options);
 
   // personal calificado en el parto
-  // viz-4-2-2
+  id = 'viz-4-2-2';
+  type = 'polar';
+  c = 12;
+  h = 500;
+  
+  data = [
+    {
+      value : 51,
+      color: "#D5716A"
+    },
+    {
+      value : 70,
+      color: "#EF9169"
+    },
+    {
+      value : 69,
+      color: "#F5E38A"
+    },
+    {
+      value : 96,
+      color: "#995080"
+    },
+    {
+      value : 40,
+      color: "#5376A0"
+    },
+    {
+      value : 63,
+      color: "#77AB77"
+    }
+  ];
+
+  options = {};
+
+  createChart(type, id, c, h, data, options);
+
 });
 
 function createChart (type, id, columns, height, data, options) {
