@@ -8,8 +8,8 @@ jQuery(document).ready(function($) {
   var sans = 'Droid Sans';
   var serif = 'Droid Serif';
 
-  // VIZ 1  
-  id = 'viz-4-1-2';
+  // agua potable y saneamiento - a 
+  id = 'viz-4-1-2-a';
   type = 'bar';
   c = 6;
   h = 500;
@@ -60,6 +60,46 @@ jQuery(document).ready(function($) {
 
   createChart(type, id, c, h, data, options);
 
+  // agua potable y saneamiento - b
+  id = 'viz-4-1-2-b';
+  data = {
+    labels : ["Acceso a saneamiento",],
+    datasets : [
+      {
+        fillColor : "rgba(213,113,106,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [36]
+      },
+      {
+        fillColor : "rgba(245,227,138,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [76]
+      },
+
+      {
+        fillColor : "rgba(82,118,160,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [65]
+      },
+      {
+        fillColor : "rgba(119,171,115,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [75]
+      },
+      {
+        fillColor : "rgba(239,145,105,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [82]
+      },
+      {
+        fillColor : "rgba(153,80,128,0.9)", 
+        strokeColor : "rgba(255,255,255,1)", 
+        data : [97]
+      }
+    ]
+  };
+
+  createChart(type, id, c, h, data, options);
 });
 
 function createChart (type, id, columns, height, data, options) {
