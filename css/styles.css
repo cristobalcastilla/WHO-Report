@@ -134,6 +134,10 @@ CLASES PRINCIPALES
   margin-top: 20px;
 }
 
+.viz:nth-child(2n) {
+  background-color: #ECECEC;
+}
+
 /*
 AUTOR
 */
